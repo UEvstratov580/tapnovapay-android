@@ -1,30 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TapNovaPay"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
-
-    <TextView
-        android:id="@+id/balance_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0.00 TNP"
-        android:textSize="24sp"
-        android:layout_marginBottom="24dp"/>
-
-    <Button
+    android:layout_height="match_parent">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="TapNovaPay Wallet" />
+            
+    </com.google.android.material.appbar.AppBarLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        
+        <TextView
+            android:id="@+id/balance_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.00 TNP"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="16dp"/>
+            
+        <TextView
+            android:id="@+id/address_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Адреса: ..."
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+            
+        <TextView
+            android:id="@+id/network_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🟢 Підключено"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="4dp"/>
+            
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+            
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📤 Відправити"
+                android:layout_marginEnd="8dp"/>
+                
+            <Button
+                android:id="@+id/receive_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📥 Отримати"
+                android:layout_marginStart="8dp"/>
+                
+        </LinearLayout>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Транзакції"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+            
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/transactions_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+            
+    </LinearLayout>
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/refresh_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Оновити баланс"/>
-</LinearLayout>
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_refresh"
+        app:backgroundTint="?attr/colorPrimary"/>
+        
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

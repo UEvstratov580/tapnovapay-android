@@ -33,10 +33,29 @@ jobs:
         target: 'android'
         arch: 'android_arm64_v8a'
         
+    - name: Check Qt installation
+      run: |
+        which qmake
+        qmake --version
+        
     - name: Build APK
       run: |
+        echo "🔨 Building APK..."
         qmake tapnovapay-android.pro -spec android-clang
-        make -j$(nproc)
+        echo "✅ qmake done"
+        make -j$(nproc) 2>&1 | tee build.log
+        echo "✅ make done"
+        
+    - name: Upload build log
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-log
+        path: build.log
+        
+    - name: Find APK
+      run: |
+        find . -name "*.apk" -type f
         
     - name: Upload APK
       uses: actions/upload-artifact@v4
@@ -45,7 +64,7 @@ jobs:
         path: android-build/build/outputs/apk/debug/*.apk
         
     - name: Create Release
-      if: startsWith(github.ref, 'refs/tags/')
+      if: startsWith(github.ref, 'refs/tags/') && success()
       uses: softprops/action-gh-release@v1
       with:
         files: android-build/build/outputs/apk/debug/*.apk

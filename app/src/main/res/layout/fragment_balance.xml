@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F1A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Шапка з кнопкою налаштувань -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TapNovaPay"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/settings_button"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_settings"
+                android:background="@drawable/circle_background"
+                android:padding="6dp" />
+        </LinearLayout>
+
+        <!-- Картка балансу -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="#1A1A2E"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Загальний баланс"
+                    android:textSize="14sp"
+                    android:textColor="#94A3B8" />
+
+                <TextView
+                    android:id="@+id/balance_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00 TNP"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/balance_usd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00 USD"
+                    android:textSize="16sp"
+                    android:textColor="#7C3AED"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="11sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:ellipsize="middle"
+                    android:maxLines="1" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Кнопки дій -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="📤 Відправити"
+                android:backgroundTint="#7C3AED"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_receive"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="📥 Отримати"
+                android:backgroundTint="#10B981"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Додаткові кнопки -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btn_refresh"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="🔄 Оновити"
+                android:backgroundTint="#2A2A3E"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btn_swap"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="🔄 Swap"
+                android:backgroundTint="#2A2A3E"
+                android:textColor="#F59E0B"
+                android:textSize="13sp"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <!-- Кнопка створення гаманця -->
+        <Button
+            android:id="@+id/create_wallet_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:text="🆕 Створити новий гаманець"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#7C3AED"
+            android:textSize="14sp" />
+
+        <!-- Кнопка показати ключі -->
+        <Button
+            android:id="@+id/show_keys_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:text="🔑 Показати ключі"
+            android:textColor="#64748B"
+            android:textSize="12sp" />
+
+        <!-- Приватний ключ -->
+        <TextView
+            android:id="@+id/private_key_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="10sp"
+            android:background="#1A1A2E"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:fontFamily="monospace"
+            android:textColor="#94A3B8" />
+
+        <!-- Seed-фраза -->
+        <TextView
+            android:id="@+id/seed_phrase_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="10sp"
+            android:background="#1A1A2E"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:fontFamily="monospace"
+            android:textColor="#94A3B8" />
+    </LinearLayout>
+</ScrollView>

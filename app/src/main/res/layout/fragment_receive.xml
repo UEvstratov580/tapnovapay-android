@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0F0F1A"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📥 Отримати TNP"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp" />
+
+    <!-- QR-код -->
+    <ImageView
+        android:id="@+id/qr_image"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/receive_address_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Створіть гаманець"
+        android:textSize="14sp"
+        android:textColor="#94A3B8"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="#1A1A2E"
+        app:cornerRadius="8dp" />
+
+    <Button
+        android:id="@+id/btn_copy_address"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:text="📋 Копіювати адресу"
+        android:backgroundTint="#2A2A3E"
+        android:textColor="#7C3AED"
+        android:textSize="14sp"
+        app:cornerRadius="10dp" />
+
+    <Button
+        android:id="@+id/btn_share_address"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="📤 Поділитися адресою"
+        android:backgroundTint="#2A2A3E"
+        android:textColor="#10B981"
+        android:textSize="14sp"
+        app:cornerRadius="10dp" />
+
+    <Button
+        android:id="@+id/btn_scan_qr"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="📷 Сканувати QR для переказу"
+        android:backgroundTint="#7C3AED"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:cornerRadius="10dp" />
+</LinearLayout>

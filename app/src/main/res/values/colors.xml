@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#7C3AED</color>
+    <color name="primary_dark">#5B21B6</color>
+    <color name="primary_light">#EDE9FE</color>
+    <color name="secondary">#10B981</color>
+    <color name="background">#0F0F1A</color>
+    <color name="card_dark">#1A1A2E</color>
+    <color name="card_light">#2A2A3E</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#64748B</color>
+    <color name="success">#10B981</color>
+    <color name="error">#EF4444</color>
+    <color name="warning">#F59E0B</color>
+    <color name="gradient_start">#7C3AED</color>
+    <color name="gradient_end">#5B21B6</color>
+    <color name="ic_launcher_background">#7C3AED</color>
+    
+    <!-- Кольори для нижнього меню -->
+    <color name="bottom_nav_background">#1A1A2E</color>
+    <color name="bottom_nav_item_selected">#7C3AED</color>
+    <color name="bottom_nav_item_unselected">#64748B</color>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#0F0F1A">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🧪 Тест API"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Натисніть кнопку для перевірки"
+        android:textSize="16sp"
+        android:textColor="#94A3B8"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#1A1A2E"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="🔍 Перевірити API"
+        android:backgroundTint="#7C3AED"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+</LinearLayout>

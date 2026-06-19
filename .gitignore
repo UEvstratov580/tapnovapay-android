@@ -1,0 +1,51 @@
+# Gradle
+.gradle/
+build/
+app/build/
+app/release/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Android
+*.iml
+.idea/
+.gradle/
+local.properties
+.DS_Store
+captures/
+.externalNativeBuild/
+*.log
+
+# Java
+*.class
+*.jar
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Keystore (безпека!)
+keystore/
+*.keystore
+*.jks
+
+# User-specific
+*.user
+*.userosscache
+*.dSYM.zip
+*.dSYM
+
+# Gradle wrapper
+gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ
+.idea/
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/

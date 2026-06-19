@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F1A"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚙️ Налаштування"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Адреса гаманця"
+            android:textSize="14sp"
+            android:textColor="#94A3B8"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/address_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="#7C3AED"
+            android:fontFamily="monospace"
+            android:padding="12dp"
+            android:background="#1A1A2E"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_show_keys"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="👁️ Показати ключі"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#7C3AED"
+            android:textSize="14sp"
+            app:cornerRadius="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/private_key_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="11sp"
+            android:textColor="#94A3B8"
+            android:fontFamily="monospace"
+            android:padding="12dp"
+            android:background="#1A1A2E"
+            app:cornerRadius="8dp"
+            android:visibility="gone"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/seed_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="11sp"
+            android:textColor="#94A3B8"
+            android:fontFamily="monospace"
+            android:padding="12dp"
+            android:background="#1A1A2E"
+            app:cornerRadius="8dp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_backup"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="💾 Бекап гаманця"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#10B981"
+            android:textSize="14sp"
+            app:cornerRadius="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_theme"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🌙 Темна тема"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#F59E0B"
+            android:textSize="14sp"
+            app:cornerRadius="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_pin"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🔒 PIN-код"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#94A3B8"
+            android:textSize="14sp"
+            app:cornerRadius="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_fingerprint"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🖐️ Відбиток пальця"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#94A3B8"
+            android:textSize="14sp"
+            app:cornerRadius="10dp"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+</ScrollView>

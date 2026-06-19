@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#0F0F1A"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/pin_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔒 Введіть PIN-код"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/pin_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Введіть 4 цифри"
+        android:textSize="16sp"
+        android:textColor="#94A3B8"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Цифри -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:rowOrderPreserved="false">
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="1"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="2"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="3"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="4"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_5"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="5"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_6"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="6"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_7"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="7"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_8"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="8"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_9"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="9"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="⌫"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_0"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="0"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="✕"
+            android:textSize="22sp"
+            android:backgroundTint="#2A2A3E"
+            android:textColor="#FFFFFF" />
+    </GridLayout>
+</LinearLayout>

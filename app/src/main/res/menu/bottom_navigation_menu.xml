@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_balance"
+        android:icon="@drawable/ic_balance"
+        android:title="Головна" />
+    <item
+        android:id="@+id/nav_send"
+        android:icon="@drawable/ic_send"
+        android:title="Відправити" />
+    <item
+        android:id="@+id/nav_receive"
+        android:icon="@drawable/ic_receive"
+        android:title="Отримати" />
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/ic_history"
+        android:title="Історія" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Налаштування" />
+</menu>

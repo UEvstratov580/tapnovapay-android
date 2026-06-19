@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F1A"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💎 TapNovaPay"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#7C3AED"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Криптовалютний гаманець"
+            android:textSize="16sp"
+            android:textColor="#94A3B8"
+            android:layout_marginBottom="48dp" />
+
+        <!-- КНОПКИ ВИБОРУ (тільки на початку) -->
+        <LinearLayout
+            android:id="@+id/choice_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn_create_new"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🆕 Створити новий гаманець"
+                android:backgroundTint="#7C3AED"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btn_restore_choice"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🔄 Відновити гаманець"
+                android:backgroundTint="#374151"
+                android:textColor="#7C3AED"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- ВІДНОВЛЕННЯ - ВИБІР СПОСОБУ -->
+        <LinearLayout
+            android:id="@+id/restore_choice_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Оберіть спосіб відновлення"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btn_restore_seed"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🌱 Відновити за seed-фразою"
+                android:backgroundTint="#10B981"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btn_restore_key"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🔑 Відновити за закритим ключем"
+                android:backgroundTint="#F59E0B"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btn_back_to_choice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="◀ Назад"
+                android:backgroundTint="#374151"
+                android:textColor="#94A3B8"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- ВІДНОВЛЕННЯ ЗА SEED-ФРАЗОЮ -->
+        <LinearLayout
+            android:id="@+id/restore_seed_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌱 Введіть seed-фразу (12 слів)"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/seed_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Введіть 12 слів через пробіл"
+                android:inputType="textMultiLine"
+                android:padding="14dp"
+                android:background="@drawable/edittext_dark"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#94A3B8"
+                android:minLines="3"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btn_restore_seed_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="✅ Відновити"
+                android:backgroundTint="#10B981"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_back_to_restore_choice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:text="◀ Назад"
+                android:backgroundTint="#374151"
+                android:textColor="#94A3B8"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- ВІДНОВЛЕННЯ ЗА ЗАКРИТИМ КЛЮЧЕМ -->
+        <LinearLayout
+            android:id="@+id/restore_key_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔑 Введіть закритий ключ"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/private_key_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Введіть приватний ключ"
+                android:inputType="text"
+                android:padding="14dp"
+                android:background="@drawable/edittext_dark"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#94A3B8"
+                android:minLines="2"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btn_restore_key_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="✅ Відновити"
+                android:backgroundTint="#F59E0B"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_back_to_restore_choice_key"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:text="◀ Назад"
+                android:backgroundTint="#374151"
+                android:textColor="#94A3B8"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- ПОКАЗ SEED-ФРАЗИ ПРИ СТВОРЕННІ -->
+        <LinearLayout
+            android:id="@+id/seed_display_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌱 ВАША SEED-ФРАЗА"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#10B981"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/seed_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:background="#1A1A2E"
+                android:padding="16dp"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btn_copy_seed"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="📋 Копіювати"
+                    android:backgroundTint="#374151"
+                    android:textColor="#7C3AED"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="4dp" />
+
+                <Button
+                    android:id="@+id/btn_seed_verified"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="✅ Я зберегла"
+                    android:backgroundTint="#10B981"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="4dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- ПЕРЕВІРКА SEED-ФРАЗИ -->
+            <LinearLayout
+                android:id="@+id/seed_verify_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔐 Підтвердіть seed-фразу"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Введіть слово #"
+                    android:textSize="14sp"
+                    android:textColor="#94A3B8"
+                    android:id="@+id/verify_hint" />
+
+                <EditText
+                    android:id="@+id/verify_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Введіть слово"
+                    android:inputType="text"
+                    android:padding="14dp"
+                    android:background="@drawable/edittext_dark"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#94A3B8"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btn_verify_seed"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="✅ Підтвердити"
+                    android:backgroundTint="#7C3AED"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
